@@ -1,0 +1,8 @@
+---
+- name: RoleCall
+  become: yes
+  roles: 
+    - { role: secret, tags: [secret] }
+    - { role: fail2ban, tags: [fail2ban] }
+    - { role: sshd, tags: [sshd] }
+    
